@@ -14,11 +14,11 @@ end
 post'/home' do
    @first=params[:a]
    @second=params[:b]
-   #@symbol=params[:c]
-   #erb "вычисление значений"
+   @symbol=params[:c]
+   #erb "вычисление значений a+b"
 
 
-   hh={:a=>'Enter first value',:b=>'Enter second value'}
+   hh={:a=>'Enter first value',:b=>'Enter second value',:c=>"Enter you move"}
 
    hh.each do |key,value| 
       if params[key]==''
