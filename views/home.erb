@@ -3,14 +3,20 @@
 
 <form action="/home" method="POST">
 	<p>You'r first values:<%=@first%> </p>
-	<input type="integer" name='a'>
+	<input type="number" name='a'>
 	<br/>
 	<p>You'r second values:<%=@second%></p>
-	<input type="integer" name='b'>
+	<input type="number" name='b'>
 	<br/>
-	<p>Choose you you move(+,-,*,/):<%=@symbol %></p>
-	<input type="varchar" name='c'>
-	<br/>
+	<div class="mb-3">
+    <label>Choose move</label>
+  <select id='choose' name="choose">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  </div>
 	<br/>
   	<button type="submit" class="btn btn-dark">Result</button>
 </form>
